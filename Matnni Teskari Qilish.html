@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>28. Teskari Matn</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #fffde7; margin: 0; }
+        .card { background: white; padding: 25px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .res { font-size: 18px; font-weight: bold; color: #f57f17; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>Matnni Teskari Qilish</h3>
+        <input type="text" id="str" placeholder="Matn yozing..." oninput="reverse()">
+        <div class="res" id="res"></div>
+    </div>
+    <script>
+        function reverse() {
+            const txt = document.getElementById('str').value;
+            document.getElementById('res').innerText = txt.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>
